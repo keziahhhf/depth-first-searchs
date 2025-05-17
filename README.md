@@ -87,6 +87,49 @@ F H <BR>
 <h3>Sample Output</h3>
 <hr>
 ['0', '1', '2', '3', '4']
+<h3>PROGRAM</h3>
+```
+from collections import deque
+from collections import defaultdict
+def dfs(graph,start,visited,path):
+    path.append(start)
+    visited[start]=True
+    for neighbour in graph[start]:
+        if visited[neighbour]==False:
+            dfs(graph,neighbour,visited,path)
+            visited[neighbour]=True
+    return path
+graph=defaultdict(list)
+n,e=map(int,input().split())
+for i in range(e):
+    u,v=map(str,input().split())
+    graph[u].append(v)
+    graph[v].append(u)
+#print(graph)
+start='A'
+visited=defaultdict(bool)
+path=[]
+traversedpath=dfs(graph,start,visited,path)
+print(traversedpath)
+```
+
+<hr>
+<h3>INPUT</h3>
+<hr>
+8 9
+A B
+A C
+B E
+C D
+B D
+C G
+D F
+G F
+F H
+
+<h3>Sample Output</h3>
+![image](https://github.com/user-attachments/assets/f9fd6a2f-3e7a-4b7e-932b-ca3b789e06ad)
+
 
 <hr>
 <h3>Result:</h3>
