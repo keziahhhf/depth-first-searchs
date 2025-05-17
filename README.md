@@ -128,7 +128,7 @@ G F
 F H
 
 <h3>Sample Output</h3>
-![image](https://github.com/user-attachments/assets/f9fd6a2f-3e7a-4b7e-932b-ca3b789e06ad)
+![image](https://github.com/user-attachments/assets/ff3e7992-7480-4c71-862a-273b335012b8)
 
 
 <hr>
